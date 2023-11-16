@@ -1,0 +1,44 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"type\":\"OWNED\",\"email\":\"a@a.com\",\"public_profile\":{\"business_name\":\"Test business\"}}",
+      "url": "https://api.xendit.co/v2/accounts",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAC5H4sIAAAAAAAA/4WOvQrCMBhFX0Uy29IvTdOfycGiLiq1ILhImkYI9Cc0yVBK392vg7PjPfdwuQvRLSkITxJOWSOB5pAzGrWMiSznQPZETko4tUk0onEAEACvgRWQFTEP05S+UPKm/S+pXugOFXEQoRx7JG42CsHteS2PGI1vOi3fZho/usNiIY23elDWvgfRb2atrNv9IFnx3egHN81Y3c+4YJ1w3mKqytPlUZcV7q5fpsdKjeQAAAA=",
+      "headers": {
+        "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 16 Nov 2023 14:18:38 GMT",
+        "etag": "W/\"e4-H8krjSmr9bCawNsgNKO5d7/orfM\"",
+        "expires": "0",
+        "pragma": "no-cache",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2999",
+        "rate-limit-reset": "60",
+        "request-id": "2789848788681278505",
+        "strict-transport-security": "max-age=2592000; includeSubDomains",
+        "surrogate-control": "no-store",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539_2037854=QAMWXpuTO0V6GUpetAof7AAAAACP172ngpkq+q5aPyoTEDvt; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "x-iinfo": "14-49453771-49453794 NNYN CT(2 2 0) RT(1700144316124 122) q(0 0 0 1) r(20 20) U6"
+      },
+      "status_code": 200
+    }
+  }
+]

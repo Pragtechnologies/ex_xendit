@@ -1,6 +1,12 @@
 # ExXendit
+[![License](https://img.shields.io/hexpm/l/ex_xendit.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![Version](https://img.shields.io/hexpm/v/ex_xendit.svg)](https://hex.pm/packages/ex_xendit)
+[![CI](https://github.com/pragtechnologies/ex_xendit/actions/workflows/elixir.yml/badge.svg)](https://github.com/pragtechnologies/ex_xendit/actions/workflows/elixir.yml)
 
-ExXendit is an elixir sdk for [Xendit](https://www.xendit.com). [Docs](https://hexdocs.pm/ex_xendit)
+[Docs](https://hexdocs.pm/ex_xendit)
+
+ExXendit is an elixir sdk for [Xendit](https://www.xendit.com). 
+
 
 ## Installation
 Put this in your `mix.exs` and run `mix deps.get`.

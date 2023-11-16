@@ -77,7 +77,7 @@ defmodule ExXendit.Transaction do
       {:ok, %Req.Response{}}
 
       # Sub Account
-      iex> ExXendit.Transaction.list(%{currency: "PHP"}, "<sub_account_id>")
+      iex> ExXendit.Transaction.list(%{currency: "PHP"}, "sub_account_id")
       {:ok, %Req.Response{}}
   """
 
@@ -92,6 +92,21 @@ defmodule ExXendit.Transaction do
     end
   end
 
+  @doc """
+  Get a specific transaction of your main or sub-account. Use `get/1` if you intend to use for main only.
+
+  ## Path Parameters
+  * `:transaction_id` - Id of the transaction 
+
+  ## Examples
+      # Main Account
+      iex> ExXendit.Transaction.get("transaction_id")
+      {:ok, %Req.Response{}}
+
+      # Sub Account
+      iex> ExXendit.Transaction.list("transaction_id", "sub_account_id")
+      {:ok, %Req.Response{}}
+  """
   @spec get(String.t(), ExXendit.sub_account_id()) :: {:ok, Req.Response.t()}
   def get(transaction_id, sub_account_id \\ "") do
     if sub_account_id != "" do

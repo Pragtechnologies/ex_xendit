@@ -1,7 +1,7 @@
 defmodule ExXendit.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
   @name "ExXendit"
   @organization "pragtechnologies"
   @description "Elixir library for Xendit based on https://developers.xendit.co/api-reference"
@@ -65,8 +65,8 @@ defmodule ExXendit.MixProject do
 
   defp package do
     [
-      licenses: ["MIT"],
-      links: %{"Github" => @git},
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => @git},
       maintainers: [@organization]
     ]
   end

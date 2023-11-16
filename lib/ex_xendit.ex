@@ -22,6 +22,21 @@ defmodule ExXendit do
     |> Req.get(url: url)
   end
 
+  @doc false
+  def post(url, params) do
+    init()
+    |> auth()
+    |> Req.post(url: url, json: params)
+  end
+
+  @doc false
+  def post(url, sub_account_id, params) do
+    init()
+    |> auth()
+    |> sub_account(sub_account_id)
+    |> Req.post(url: url, json: params)
+  end
+
   defp parse_url(url, nil), do: url
   defp parse_url(url, params), do: url <> "?" <> URI.encode_query(params)
 
