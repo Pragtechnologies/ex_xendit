@@ -5,7 +5,7 @@ defmodule ExXendit do
 
   @doc false
   def get(url, params) do
-    url = url <> "?" <> URI.encode_query(params)
+    url = parse_url(url, params)
 
     init()
     |> auth()
@@ -14,13 +14,16 @@ defmodule ExXendit do
 
   @doc false
   def get(url, sub_account_id, params) do
-    url = url <> "?" <> URI.encode_query(params)
+    url = parse_url(url, params)
 
     init()
     |> auth()
     |> sub_account(sub_account_id)
     |> Req.get(url: url)
   end
+
+  defp parse_url(url, nil), do: url
+  defp parse_url(url, params), do: url <> "?" <> URI.encode_query(params)
 
   defp init do
     base_url = Application.get_env(:ex_xendit, :base_url)

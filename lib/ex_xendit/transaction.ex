@@ -2,7 +2,7 @@ defmodule ExXendit.Transaction do
   @moduledoc """
   Handles functions at https://developers.xendit.co/api-reference/#transactions
   """
-  import ExXendit
+  alias ExXendit
 
   @doc """
   List the transactions of your main or sub-account. Use `list/1` if you intend to use for main only.
@@ -85,10 +85,21 @@ defmodule ExXendit.Transaction do
   def list(params, sub_account_id \\ "") do
     if sub_account_id != "" do
       "/transactions"
-      |> get(sub_account_id, params)
+      |> ExXendit.get(sub_account_id, params)
     else
       "/transactions"
-      |> get(params)
+      |> ExXendit.get(params)
+    end
+  end
+
+  @spec get(String.t(), ExXendit.sub_account_id()) :: {:ok, Req.Response.t()}
+  def get(transaction_id, sub_account_id \\ "") do
+    if sub_account_id != "" do
+      "/transactions/#{transaction_id}"
+      |> ExXendit.get(sub_account_id, nil)
+    else
+      "/transactions/#{transaction_id}"
+      |> ExXendit.get(nil)
     end
   end
 end

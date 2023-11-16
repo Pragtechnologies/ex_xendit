@@ -33,4 +33,26 @@ defmodule ExXendit.TransactionTest do
       end
     end
   end
+
+  describe "get/1 for main account" do
+    test "will return result" do
+      use_cassette "get_main_transaction" do
+        assert {:ok, %{body: body}} = Transaction.get("txn_cda37af7-be6f-4424-b7d2-71eee10c3993")
+        assert %{"business_id" => "6163f373dac5503a0705b783"} = body
+      end
+    end
+  end
+
+  describe "get/2 for sub account" do
+    test "will return result" do
+      use_cassette "get_sa_transaction" do
+        sub_account_id = "655438ce1991c5156ae7a4e5"
+
+        assert {:ok, %{body: body}} =
+                 Transaction.get("txn_75e5e006-8301-48ad-b879-48da5fa368f7", sub_account_id)
+
+        assert %{"business_id" => "655438ce1991c5156ae7a4e5"} = body
+      end
+    end
+  end
 end
