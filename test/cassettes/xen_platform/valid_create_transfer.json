@@ -1,0 +1,50 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"reference\":\"test_a2\",\"amount\":60,\"source_user_id\":\"63d23daedfa237a41007760b\",\"destination_user_id\":\"655438b31991c5156ae7a348\"}",
+      "url": "https://api.xendit.co/transfers",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAADOH4sIAAAAAAAA/02OsW7EIBBE+3wG9RGxwAJ2e0qqdM41aawF1pKLwxLg6nT/Hq6IlHY07808RK9U2sZ13bOYRUoeiFOUCSJIi4plVBtK8DBhQIdBo7iIdpw18Xq2P86ZrE0mzhtp48mCUt47FUc3c+t7ob4f5T+AaE2IBqYJEgI6Yk/GhgHQ/ThLF7NTF1F5XOOSeCB9iFbSr/lO/WwjWm7X68eyfN6+RpoqU+eXXCttJIAE9w1uhjAbfAewaKYw4Y94vv0Ccxh9kfcAAAA=",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=UTF-8",
+        "date": "Thu, 16 Nov 2023 16:18:35 GMT",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2997",
+        "rate-limit-reset": "8.388",
+        "referrer-policy": "no-referrer",
+        "request-id": "4631242516608719961",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539_2037854=RSFtI8NYz29MVIebtAof7AAAAACMbtJBaeRkuqISjh45X+eF; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "x-iinfo": "4-21035664-21035673 NNYN CT(1 12 0) RT(1700151514035 112) q(0 0 0 -1) r(12 12) U6"
+      },
+      "status_code": 200
+    }
+  }
+]

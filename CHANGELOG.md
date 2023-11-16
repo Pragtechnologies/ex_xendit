@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.2 (2023-11-17)
+
+- Develop `ExXendit.XenPlatform.create_transfer`
+
 ## v0.1.1 (2023-11-16)
 
 - Put sub_account_id inside the headers parameters

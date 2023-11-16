@@ -51,4 +51,41 @@ defmodule ExXendit.XenPlatform do
     "v2/accounts"
     |> ExXendit.post(params)
   end
+
+  @doc """
+  Creates a transfer.
+
+  ## Request Parameters
+    * `:reference`* - A unique reference for this Transfer. Use this to reconcile transactions across your master and sub-accounts  
+
+    * `:amount`* - The amount that you would like to transfer. No decimal point for IDR, and max 2 decimal points for PHP 
+      
+    * `:source_user_id`* - The account balance from which you would like to send the Transfer from. This can either be your platform or sub accounts user_id.
+
+    * `:destination_user_id`* - The account balance from which you would like to send the Transfer to. This can either be your platform or sub accounts user_id.
+
+
+  ## Response Parameters
+    * `:created` - Timestamp of when the account was created in UTC 
+
+    * `:transfer_id` - A unique reference for this Transfer set by Xendit systems 
+
+    * `:reference` - A unique reference for this Transfer that you set when making the request 
+
+    * `:source_user_id` - The source of the transfer. This is the user_id of either your master or sub account
+
+    * `:destination_user_id` - The destination of the transfer. This is the user_id of either your master or sub account
+
+    * `:status` - The status of the Transfer 
+
+      Available values: `SUCCESSFUL`,`PENDING`, `FAILED`
+
+    * `:amount` - The amount that was transferred. 
+
+  """
+  @spec create_transfer(map()) :: {:ok, Req.Response.t()}
+  def create_transfer(params) do
+    "/transfers"
+    |> ExXendit.post(params)
+  end
 end
