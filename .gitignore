@@ -24,3 +24,16 @@ ex_xendit-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Vim buffer
+*.swp
+
+# Dialyxir files
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
+
+# Mac buffer
+.DS_Store
+
+# Secret config
+*.secret.exs

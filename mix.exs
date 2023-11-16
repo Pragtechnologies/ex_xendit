@@ -4,7 +4,7 @@ defmodule ExXendit.MixProject do
   @version "0.1.0"
   @name "ExXendit"
   @organization "pragtechnologies"
-  @description "Library for https://developers.xendit.co/api-reference"
+  @description "Elixir library for Xendit based on https://developers.xendit.co/api-reference"
   @git "https://github.com/Pragtechnologies/ex_xendit"
 
   @deps [
@@ -13,14 +13,14 @@ defmodule ExXendit.MixProject do
     {:exvcr, "~> 0.14", only: :test},
     {:ex_doc, "~> 0.27", only: :dev, runtime: false},
     {:excoveralls, "~> 0.10", only: :test},
-    {:credo, "~> 1.6", only: [:dev], runtime: false},
+    {:credo, "~> 1.7", only: [:dev], runtime: false},
     {:dialyxir, "~> 1.1", only: [:dev], runtime: false}
   ]
 
   def project do
     [
       app: :ex_xendit,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: @deps,
@@ -30,11 +30,12 @@ defmodule ExXendit.MixProject do
       homepage_url: "https://www.pragtechnologies.com/",
       description: @description,
       package: package(),
+      aliases: aliases(),
       docs: [
         # The main page in the docs
         main: @name,
         logo: "logo.svg",
-        extras: ["README.md"]
+        extras: ["README.md", "CHANGELOG.md"]
       ],
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
@@ -53,6 +54,12 @@ defmodule ExXendit.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp aliases do
+    [
+      check: ["coveralls --env=test", "dialyzer", "credo"]
     ]
   end
 

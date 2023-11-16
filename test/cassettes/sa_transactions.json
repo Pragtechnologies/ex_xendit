@@ -1,0 +1,51 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "",
+      "url": "https://api.xendit.co/transactions?currency=PHP",
+      "headers": {
+        "accept-encoding": "gzip",
+        "content-type": "application/json",
+        "for-user-id": "655438ce1991c5156ae7a4e5",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAPcH4sIAAAAAAAA/+WXbW8bNwyA/8t9Ng29S7xvXmY0Bdo0WDIMWVEc9ELVxhw7sM9rgqD/vbxk6wynyYCuMRAMuC8iKUoUn6Oo22YWN93lak1NW+NiQ6OmxD427fvbZl6atumvlx0ioS2mABkjwWghIciawMmUrFShovPNqLlar8o2993dPCkw55AFGLIBTKYIqXqEkkQspaDN0fCc/uaKV25OJxdvpyfnLNj0sd9uWHT269HR9OyMRXkWl0tadDn29HG1vmHl9LfJmzfT813lqtw5Ou4GX5OLCevWVGlNy0z3W1LZJVU5jBKjBhOQIIRsIZbgak0OS5U8K+a82i6HMGjZz+uc1k273C4WvNZ2Pbi7uVvndDC9HCyb1is7VqNmSX23J8pxM6uL1See8vbdyfSie30yBEl9v6BL9t99jfd0evLz65NXrKVNP7/kWEu3Y8eiIT4llAYpQeK5dK0Q/I2FEL/ztLTdzJe02dwH66w1OmSSiDJbaV0kHzkXw5GtafC+682dC9na0Eo7xiAHb9ur8u9GlXhPt801Lcu87+5GYtT8GRdb6jjLHEEfr+9kf5l8mvez2WpR5suPX1X9bL4u3VVc9zff0H/+PNohUQtPOVkL1isDTGOCJFyGYnLQpF31UuyTWBSalDFAkWTB2FIhUiEQrjqXTMwyy+ch8ez43el0yh4fsmiEC6nUCOhi5t+jIKDmoceqqySXY8bvZTHskxheGIey1Tj2Sj3J4a7RwTl0SUfhiwOhHYGJ5Dh9UoN2pYpAuaK3+xwmzxgKqyFa48GIaIG98LCgDyZjIhOeh8NXv0x++iaFBSvvlwisQ6bQZS7sSUlQ6HVynvNVxf+TQtFabK0eo3+iGu4ZHb4aoneaUgSDyBeasgmiQA8Mmk1YjUXp9ikMquRMIoDm3PJdztUQRaxgI9mKVVZS6sAUCsFhuMjY5Tj0CyoyhT5BqMUKNBgMhRdBoT8XvrW2lWospPqvFNp/vGnpH6HwodHBKTTWo6+eEdKSi4hHA4m8hqAN8eXKuQ55n8KcjQm+BuC2i2shnwtgkRY0J17yrSx1fSYKH+0OUfOuAwMYROWfKQcPmEIAbhl1TNowifXFdIf3JHI91ONg3Y8hkb2ZsZT2SRJ3jQ5OordkSQjH6PETxYRYIAV+c5hQoq1Ru1AfvFMU06vZFBAFd5SWErdkMgD5FLOmgi6UZ6qHR5Oz44ccZp2sMgohecXV0KsKqWg1hENZpJxSTN/JoVYPOLwXPSeHutWyVWIs/Y/g8G9vJpjHOdwzOgiHH0bNYr78g8/o/YfPXwDvt5sOVg8AAA==",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 16 Nov 2023 08:06:20 GMT",
+        "etag": "W/\"f56-PIqxPoYetSxvER1a7+d1xuGe1mA\"",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2999",
+        "rate-limit-reset": "59.999",
+        "referrer-policy": "no-referrer",
+        "request-id": "7013250317333326480",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-powered-by": "Express",
+        "x-xss-protection": "0",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539=B+uHW8H2mylLKwl2tAof7AAAAABkZtDT4mmbcYMDJUFQkHWW; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "x-iinfo": "1-4062351-4062354 nNYY RT(1700121979791 137) q(0 0 0 -1) r(0 5) U16"
+      },
+      "status_code": 200
+    }
+  }
+]

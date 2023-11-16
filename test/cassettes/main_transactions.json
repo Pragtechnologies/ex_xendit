@@ -1,0 +1,50 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "",
+      "url": "https://api.xendit.co/transactions?currency=PHP",
+      "headers": {
+        "accept-encoding": "gzip",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAZmH4sIAAAAAAAA/9SYXW/aSBSG/8rK1znWfH9w5ya0qZoQBE633b1A89kgEYPAtI2q/vc9TjYtBdJWyVJ1LS7wzPj1mZln3nPgU3HlVpPr+TIVvXa5TkdFdK0ren9/Kqax6BXtx2ZCUs5JUQpcEgIi4jeXtALPmGKKk0QSL46KxXIe16Gd3D03X6wXLrTT99P2BjL1WiknQQYmQThlwISogDEfhaBSuexRob1ZYBhFfTG8HOLtqnXteoUN48vj4/54jE3hyjVNmk2Ca9O7+fIGO59Vg1ebPfOIGs16NjsqlimnZWpCekJMLoT5uulmlZp2mqdpea8e1stOvItheNrF6667kUWPEryOiia1k62m4FZXeTb/gI+cXwz6bycvB908U9vO0jXqT75OuV/XZ/0T7E2rdnqN042TjXHY1K0UI4wDJcBUTWhP6h7TpeDiL3zMr1fTJq1Wd1NXVPHMNY8uSEm4I5pIr023bWGZOvWH1Jju1NaL+ONBOWFMn4qPqYnTdnJ7h3N+72brNHEx4gxa9/G27d8hH6bt1dV8FqfNuy9d7dV0GScLt2xv9vZ/WaHji/PhWb/GNfr8+WiDVioTNdoLsEwlEN4l8CpoiJzQED3HCaTv0+oTYR6BB+p5BpGSBSOyARa1E5o7aoz+1bT+ZEyPoFVusyp/CalElVKZ/4rUTk2KH5D6ddDvQarlnCXnFWijPOC5DehAXAFlGq/gaeRsm9TA8LDZoMBmb6DbeUC7ImCjksJEVKNsg81RNRg/749+Gs83/cHwrKqfX4zOdygtTvrPq8uzuthFdemaVYfqvPmjW8xHccj4txh29wehkEhgtiasx2WPs1LpJ1G4o7bPL/cP+j0oNCZmk6MEwygHQZUDk6IDYbXniWeJ2X+bQsV1UJoYErxRkRDqs9ZCq6/kDau35/1B/dPgHVejk/Eucq9fjqtd3kIAt1jMp03bbS5o7RKxmMlt5BEEyfjN4sH3MjH0e0+Tig8wWYguMZM3txcllhbfc0rcOvYtpMLK0uqDgMoA6yxmaorGRfBTYpyPB/VOjdVE9citE1LDdkDdeCUVPUFLTh+yS1wKLvfAyktjDsur9z5xl7Bkk5gOhbEMjM8enCKIoJeBKrnNa8T6VeoYgLPbWk94JMQn4JpYYw1XVpjHs9v/szrDSHfpHZ5OXoyqZ6i3y/C4Grx4ezkcV2dwVg1OzqvRKxhcjOpTqF73AfeaPc5GBabvUsstTLm1pRUH5JTXxCAU+KZSKf1UTum9mijJHkPdfCXH2ro0mj/AqcVzQ/dw2j10WE5V8tzERCAKrdFNDTInfYZITCBGUYLUbnMqbHDGEAdovFgRJGrRxKQHkoPJlllBRTgQp8fV+HSXUqxPrNKB40mJGBBlEWyQDJKkhkeRmRD5kWXndr6XxJbygIhSUaOPdmWgKC15KqKU3avJkjO5H9Evr+SmxOz4AKKUlYTtQ7QU4rCIEq0kJskEgeWAfpoYIKaIG8vZ6iwd13QbUY+JNqcYgedIu3IB7TfQBMZlTlJiQlH7SxGVlMkYiILMA1bEKWswSnZVNOEsdn9dSPE/QZTomki00B5jpWZP+Bl/pybv1XhJOd1A9B8AAAD//92Zy04CQRBF/4UFK2fs6ulXkRBXxh9wy6KnH4EIaGQWuuDfvS2SGAYSiWDAHQmEDlOnq+pc+kcqDPyanbs4RL0LyTl0HBUFY3K3cKSI4Y9as2dUiGXcRdRHA8eXtiwHaFrCysrHgnVgQVFJdFn6U0RTbji0iiuZDO5Zdk3FLRo8flmTXdQyeH8tiJpHMidbSMVmhtOIqGZzCNHNkfiQqaXVF4co29RoAyXHiMyobubK6ayq7JmsL000hF1EcxYuthyLZQFrTq4sBx5YWE3CqBSF/T+I9hMm3NzamuvClNxIiZpUP2bawVTXWoqDmApZ8z5Oses2ZyY1RMDoMSDbZEAqOmHV2igrSyklEgGW0AvyTaNUsCIYjpldUX2ZVKN/sYYepfov74uu2JAg+onCf3nT4Wiee8m8hRqp82RNssSPZE+n8Pg2KmGmZNyhujF7UdweSbKsukoeUnjHRYH2mZG1p+dwcjOYz5ZPq8+/lqaoMt6//RYcru62RRujZMP5bDHrxiSGPnfpFQ9qfATAi9RNn8sDebjfpJVzvF6mt26wnqw/AAisxfDyGgAA",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Thu, 16 Nov 2023 08:07:58 GMT",
+        "etag": "W/\"1af2-0MwLSiH0fZAH9t6zamZJnKgGqcM\"",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2999",
+        "rate-limit-reset": "60",
+        "referrer-policy": "no-referrer",
+        "request-id": "5015867101515841868",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-powered-by": "Express",
+        "x-xss-protection": "0",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539=lnHVcaLh+BmmBNf3tAof7AAAAAAaLKT0tiQMPPT65U+9+lUn; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "x-iinfo": "2-7128810-7125977 pNYy RT(1700122078260 100) q(0 0 0 -1) r(6 6) U16"
+      },
+      "status_code": 200
+    }
+  }
+]
