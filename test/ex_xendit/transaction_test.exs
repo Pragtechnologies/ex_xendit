@@ -24,10 +24,13 @@ defmodule ExXendit.TransactionTest do
   describe "list/2 for sub-account" do
     test "will return result" do
       use_cassette "sa_transactions" do
-        sub_account_id = "655438ce1991c5156ae7a4e5"
         params = %{currency: "PHP"}
 
-        assert {:ok, %{body: body}} = Transaction.list(params, sub_account_id)
+        headers = %{
+          sub_account_id: "655438ce1991c5156ae7a4e5"
+        }
+
+        assert {:ok, %{body: body}} = Transaction.list(params, headers)
         assert %{"data" => [data | _]} = body
         assert %{"business_id" => "655438ce1991c5156ae7a4e5"} = data
       end
@@ -46,10 +49,12 @@ defmodule ExXendit.TransactionTest do
   describe "get/2 for sub account" do
     test "will return result" do
       use_cassette "get_sa_transaction" do
-        sub_account_id = "655438ce1991c5156ae7a4e5"
+        headers = %{
+          sub_account_id: "655438ce1991c5156ae7a4e5"
+        }
 
         assert {:ok, %{body: body}} =
-                 Transaction.get("txn_75e5e006-8301-48ad-b879-48da5fa368f7", sub_account_id)
+                 Transaction.get("txn_75e5e006-8301-48ad-b879-48da5fa368f7", headers)
 
         assert %{"business_id" => "655438ce1991c5156ae7a4e5"} = body
       end

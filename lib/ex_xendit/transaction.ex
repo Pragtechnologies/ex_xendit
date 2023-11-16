@@ -77,18 +77,18 @@ defmodule ExXendit.Transaction do
       {:ok, %Req.Response{}}
 
       # Sub Account
-      iex> ExXendit.Transaction.list(%{currency: "PHP"}, "sub_account_id")
+      iex> ExXendit.Transaction.list(%{currency: "PHP"}, %{sub_account_id: "sub_account_id"})
       {:ok, %Req.Response{}}
   """
 
-  @spec list(map(), ExXendit.sub_account_id()) :: {:ok, Req.Response.t()}
-  def list(params, sub_account_id \\ "") do
-    if sub_account_id != "" do
-      "/transactions"
-      |> ExXendit.get(sub_account_id, params)
-    else
+  @spec list(map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def list(params, headers \\ %{}) do
+    if headers == %{} do
       "/transactions"
       |> ExXendit.get(params)
+    else
+      "/transactions"
+      |> ExXendit.get(params, headers)
     end
   end
 
@@ -104,17 +104,17 @@ defmodule ExXendit.Transaction do
       {:ok, %Req.Response{}}
 
       # Sub Account
-      iex> ExXendit.Transaction.list("transaction_id", "sub_account_id")
+      iex> ExXendit.Transaction.list("transaction_id", %{sub_account_id: "sub_account_id"})
       {:ok, %Req.Response{}}
   """
-  @spec get(String.t(), ExXendit.sub_account_id()) :: {:ok, Req.Response.t()}
-  def get(transaction_id, sub_account_id \\ "") do
-    if sub_account_id != "" do
-      "/transactions/#{transaction_id}"
-      |> ExXendit.get(sub_account_id, nil)
-    else
+  @spec get(String.t(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def get(transaction_id, headers \\ %{}) do
+    if headers == %{} do
       "/transactions/#{transaction_id}"
       |> ExXendit.get(nil)
+    else
+      "/transactions/#{transaction_id}"
+      |> ExXendit.get(nil, headers)
     end
   end
 end

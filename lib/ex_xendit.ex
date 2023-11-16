@@ -13,7 +13,13 @@ defmodule ExXendit do
   end
 
   @doc false
-  def get(url, sub_account_id, params) do
+  def get(
+        url,
+        params,
+        %{
+          sub_account_id: sub_account_id
+        }
+      ) do
     url = parse_url(url, params)
 
     init()
@@ -30,7 +36,29 @@ defmodule ExXendit do
   end
 
   @doc false
-  def post(url, sub_account_id, params) do
+  def post(
+        url,
+        params,
+        %{
+          sub_account_id: sub_account_id,
+          fee_rule_id: fee_rule_id
+        }
+      ) do
+    init()
+    |> auth()
+    |> sub_account(sub_account_id)
+    |> fee_rule(fee_rule_id)
+    |> Req.post(url: url, json: params)
+  end
+
+  @doc false
+  def post(
+        url,
+        params,
+        %{
+          sub_account_id: sub_account_id
+        }
+      ) do
     init()
     |> auth()
     |> sub_account(sub_account_id)
@@ -63,8 +91,18 @@ defmodule ExXendit do
     ])
   end
 
+  defp fee_rule(req, id) do
+    req
+    |> Req.Request.put_headers([
+      {"with-fee-rule", id}
+    ])
+  end
+
   @typedoc """
-  The id of the sub-account.
+  Headers used in Xendit
   """
-  @type sub_account_id() :: String.t()
+  @type headers() :: %{
+          optional(:sub_account_id) => String.t(),
+          optional(:fee_rule_id) => String.t()
+        }
 end
