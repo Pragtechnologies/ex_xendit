@@ -12,19 +12,12 @@ defmodule ExXendit do
     |> Req.get(url: url)
   end
 
-  @doc false
-  def get(
-        url,
-        params,
-        %{
-          sub_account_id: sub_account_id
-        }
-      ) do
+  def get(url, params, headers) do
     url = parse_url(url, params)
 
     init()
     |> auth()
-    |> sub_account(sub_account_id)
+    |> parse_headers(headers)
     |> Req.get(url: url)
   end
 
@@ -36,33 +29,18 @@ defmodule ExXendit do
   end
 
   @doc false
-  def post(
-        url,
-        params,
-        %{
-          sub_account_id: sub_account_id,
-          fee_rule_id: fee_rule_id
-        }
-      ) do
+  def post(url, params, headers) do
     init()
     |> auth()
-    |> sub_account(sub_account_id)
-    |> fee_rule(fee_rule_id)
+    |> parse_headers(headers)
     |> Req.post(url: url, json: params)
   end
 
-  @doc false
-  def post(
-        url,
-        params,
-        %{
-          sub_account_id: sub_account_id
-        }
-      ) do
-    init()
-    |> auth()
-    |> sub_account(sub_account_id)
-    |> Req.post(url: url, json: params)
+  defp parse_headers(request, headers) do
+    request
+    |> sub_account(headers)
+    |> fee_rule(headers)
+    |> idempotency_key(headers)
   end
 
   defp parse_url(url, nil), do: url
@@ -84,25 +62,46 @@ defmodule ExXendit do
     ])
   end
 
-  defp sub_account(req, id) do
+  defp sub_account(req, %{sub_account_id: id}) do
     req
     |> Req.Request.put_headers([
       {"for-user-id", id}
     ])
   end
 
-  defp fee_rule(req, id) do
+  defp sub_account(req, _), do: req
+
+  defp fee_rule(req, %{with_split_rule: id}) do
     req
     |> Req.Request.put_headers([
-      {"with-fee-rule", id}
+      {"with-split-rule", id}
     ])
   end
 
+  defp fee_rule(req, _), do: req
+
+  defp idempotency_key(req, %{idempotency_key: id}) do
+    req
+    |> Req.Request.put_headers([
+      {"Idempotency-key", id}
+    ])
+  end
+
+  defp idempotency_key(req, _), do: req
+
   @typedoc """
   Headers used in Xendit
+
+  ## Parameters
+    * `:sub_account_id` - The sub-account user-id  
+
+    * `:with_split_rule` - Split Rule ID that you would like to apply to this eWallet charge  
+
+    * `:idempotency_key` - 	A unique key to prevent processing duplicate requests. Can be your reference_id or any GUID. Must be unique across development & production environments.  
   """
   @type headers() :: %{
           optional(:sub_account_id) => String.t(),
-          optional(:fee_rule_id) => String.t()
+          optional(:with_split_rule) => String.t(),
+          optional(:idempotency_key) => String.t()
         }
 end

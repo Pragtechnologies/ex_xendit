@@ -1,7 +1,7 @@
 defmodule ExXendit.MixProject do
   use Mix.Project
 
-  @version "0.1.2"
+  @version "0.1.3"
   @name "ExXendit"
   @organization "pragtechnologies"
   @description "Elixir library for Xendit based on https://developers.xendit.co/api-reference"

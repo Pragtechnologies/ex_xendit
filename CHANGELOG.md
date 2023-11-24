@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.3 (2023-11-24)
+
+- Develop `ExXendit.Payout.create`
+
 ## v0.1.2 (2023-11-17)
 
 - Develop `ExXendit.XenPlatform.create_transfer`
