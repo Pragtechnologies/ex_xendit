@@ -53,4 +53,54 @@ defmodule ExXendit.CustomerTest do
       end
     end
   end
+
+  describe "get/2" do
+    test "will return valid result for syd" do
+      use_cassette "valid_get_customer_for_syd" do
+        id = "cust-1eecc18d-914a-4f63-8fcf-8b9158d6f1e3"
+
+        assert {:ok, %{body: body}} = Customer.get(id)
+        assert body["email"] == "a@a.com"
+      end
+    end
+
+    test "will return valid result for sub_account" do
+      use_cassette "valid_get_customer_for_sub_account" do
+        id = "cust-70e52cb9-6364-4bb0-a670-190495cbd69d"
+
+        headers = %{
+          sub_account_id: "655d6ef765c63ff7577f0042"
+        }
+
+        assert {:ok, %{body: body}} = Customer.get(id, headers)
+        assert body["email"] == "a@a.com"
+      end
+    end
+  end
+
+  describe "get_by_reference_id/2" do
+    test "will return valid result for syd" do
+      use_cassette "valid_get_ref_customer_for_syd" do
+        id = "9eeddd71-54a7-4fa2-b470-befc5f1far2"
+
+        assert {:ok, %{body: %{"data" => [body]}}} = Customer.get_by_reference_id(id)
+        assert body["email"] == "a@a.com"
+      end
+    end
+
+    test "will return valid result for sub_account" do
+      use_cassette "valid_get_ref_customer_for_sub_account" do
+        id = "9eeddd71-54a7-4fa2-b470-befc5f1fa578"
+
+        headers = %{
+          sub_account_id: "655d6ef765c63ff7577f0042"
+        }
+
+        assert {:ok, %{body: %{"data" => [body]}}} =
+                 Customer.get_by_reference_id(id, headers)
+
+        assert body["email"] == "a@a.com"
+      end
+    end
+  end
 end
