@@ -27,7 +27,7 @@ defmodule ExXendit.EWallet do
     * `:channel_properties`* - Channel specific information required for the transaction to be initiated
 
   """
-  @spec create_charge(map(), map()) :: {:ok, Req.Response.t()}
+  @spec create_charge(map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
   def create_charge(params, headers \\ %{}) do
     if headers != %{} do
       "ewallets/charges"
