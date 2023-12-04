@@ -142,4 +142,102 @@ defmodule ExXendit.SubscriptionTest do
       end
     end
   end
+
+  describe "update_plan/3" do
+    test "will return valid result for syd" do
+      use_cassette "valid_update_plan_for_syd" do
+        id = "repl_ff9f901b-a5c3-4f21-99dc-55e2178db0cd"
+
+        params = %{
+          amount: 800,
+          items: [
+            %{
+              type: "DIGITAL_PRODUCT",
+              name: "SeeYouDoc MC",
+              net_unit_amount: 800,
+              quantity: 1,
+              url: nil,
+              category: "syd_mc"
+            }
+          ]
+        }
+
+        assert {:ok, %{body: body}} = Subscription.update_plan(id, params)
+
+        assert %{
+                 "actions" => [
+                   %{
+                     "url" => url,
+                     "url_type" => "WEB"
+                   }
+                 ],
+                 "amount" => 800
+               } = body
+
+        assert url =~ "https://linking-dev.xendit.co/"
+      end
+    end
+
+    test "will return valid result for sub account" do
+      use_cassette "valid_update_plan_for_sub_account" do
+        id = "repl_5a113543-6f98-4442-ad53-85e80494266f"
+
+        params = %{
+          amount: 800,
+          items: [
+            %{
+              type: "DIGITAL_PRODUCT",
+              name: "SeeYouDoc MC",
+              net_unit_amount: 800,
+              quantity: 1,
+              url: nil,
+              category: "syd_mc"
+            }
+          ]
+        }
+
+        headers = %{
+          sub_account_id: "655d6ef765c63ff7577f0042"
+        }
+
+        assert {:ok, %{body: body}} = Subscription.update_plan(id, params, headers)
+
+        assert %{
+                 "actions" => [
+                   %{
+                     "url" => url,
+                     "url_type" => "WEB"
+                   }
+                 ],
+                 "amount" => 800
+               } = body
+
+        assert url =~ "https://linking-dev.xendit.co/"
+      end
+    end
+  end
+
+  describe "deactivate_plan/2" do
+    test "will return valid result for syd" do
+      use_cassette "valid_deactivate_plan_for_syd" do
+        id = "repl_ff9f901b-a5c3-4f21-99dc-55e2178db0cd"
+
+        assert {:ok, %{body: body}} = Subscription.deactivate_plan(id)
+        assert body["status"] == "INACTIVE"
+      end
+    end
+
+    test "will return valid result for sub account" do
+      use_cassette "valid_deactivate_plan_for_sub_account" do
+        id = "repl_5a113543-6f98-4442-ad53-85e80494266f"
+
+        headers = %{
+          sub_account_id: "655d6ef765c63ff7577f0042"
+        }
+
+        assert {:ok, %{body: body}} = Subscription.deactivate_plan(id, headers)
+        assert body["status"] == "INACTIVE"
+      end
+    end
+  end
 end

@@ -36,6 +36,21 @@ defmodule ExXendit do
     |> Req.post(url: url, json: params)
   end
 
+  @doc false
+  def patch(url, params) do
+    init()
+    |> auth()
+    |> Req.patch(url: url, json: params)
+  end
+
+  @doc false
+  def patch(url, params, headers) do
+    init()
+    |> auth()
+    |> parse_headers(headers)
+    |> Req.patch(url: url, json: params)
+  end
+
   defp parse_headers(request, headers) do
     request
     |> sub_account(headers)
