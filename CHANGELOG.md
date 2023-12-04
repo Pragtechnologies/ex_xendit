@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v0.1.4 (2023-12-04)
+
+- Develop `ExXendit.Subscription.create_plan`
+- Develop `ExXendit.Subscription.update_plan`
+- Develop `ExXendit.Subscription.deactivate_plan`
+- Develop `ExXendit.Customer.create`
+- Develop `ExXendit.Customer.get`
+- Develop `ExXendit.Customer.get_by_reference_id`
+
 ## v0.1.3 (2023-11-24)
 
 - Develop `ExXendit.Payout.create`
