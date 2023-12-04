@@ -55,7 +55,7 @@ defmodule ExXendit.XenPlatform do
   @doc """
   Creates a transfer.
 
-  ## Request Parameters
+  ## Body Parameters
     * `:reference`* - A unique reference for this Transfer. Use this to reconcile transactions across your master and sub-accounts  
 
     * `:amount`* - The amount that you would like to transfer. No decimal point for IDR, and max 2 decimal points for PHP 

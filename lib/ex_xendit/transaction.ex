@@ -7,7 +7,7 @@ defmodule ExXendit.Transaction do
   @doc """
   List the transactions of your main or sub-account. Use `list/1` if you intend to use for main only.
 
-  ## Request Parameters
+  ## Body Parameters
     * `:types` - The type of the transactions that will be filtered. If not specified, all transaction type will be returned. 
 
       Available types:

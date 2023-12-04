@@ -14,7 +14,7 @@ defmodule ExXendit.Customer do
 
     * `:api_version` - API version in date semantic (e.g. 2020-10-31). Attach this parameter when calling a specific API version. List of API versions can be found [here](https://developers.xendit.co/api-reference/#changelog) 
 
-  ## Request Parameters
+  ## Body Parameters
     * `:reference_id`* - Reference ID provided by merchant (255 characters)  
 
     * `:type`* - Type of customer. Supported values: `INDIVIDUAL`, `BUSINESS`  
@@ -92,7 +92,7 @@ defmodule ExXendit.Customer do
     * `:reference_id`* - Your identifier for the customer  
 
   """
-  @spec get(String.t(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  @spec get_by_reference_id(String.t(), ExXendit.headers()) :: {:ok, Req.Response.t()}
   def get_by_reference_id(reference_id, headers \\ %{}) do
     if headers != %{} do
       "customers?reference_id=#{reference_id}"

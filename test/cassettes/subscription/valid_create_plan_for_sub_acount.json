@@ -1,0 +1,52 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"description\":\"MC subscription\",\"metadata\":null,\"items\":[{\"name\":\"SeeYouDoc MC\",\"type\":\"DIGITAL_PRODUCT\",\"category\":\"syd_mc\",\"url\":null,\"net_unit_amount\":1000,\"quantity\":1}],\"currency\":\"PHP\",\"customer_id\":\"cust-70e52cb9-6364-4bb0-a670-190495cbd69d\",\"reference_id\":\"9eeddd71-54a7-4fa2-b470-befc5f1fa31\",\"recurring_action\":\"PAYMENT\",\"amount\":1000,\"payment_methods\":[],\"schedule\":{\"interval\":\"MONTH\",\"reference_id\":\"9eeddd71-54a7-4fa2-b470-befc5fdfafba\",\"interval_count\":1,\"total_recurrence\":null,\"anchor_date\":\"2024-01-01T00:00:00+0800\",\"retry_interval\":\"DAY\",\"retry_interval_count\":3,\"total_retry\":2,\"failed_attempt_notifications\":[1,2]},\"immediate_action_type\":\"FULL_AMOUNT\",\"notification_config\":{\"recurring_created\":[\"WHATSAPP\",\"EMAIL\"],\"recurring_succeeded\":[\"WHATSAPP\",\"EMAIL\"],\"recurring_failed\":[\"WHATSAPP\",\"EMAIL\"],\"locale\":\"en\"},\"failed_cycle_action\":\"STOP\",\"payment_link_for_failed_attempt\":true,\"success_return_url\":\"https://syd.com/success\",\"failure_return_url\":\"https://syd.com/failure\"}",
+      "url": "https://api.xendit.co/recurring/plans",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "for-user-id": "655d6ef765c63ff7577f0042",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAMOH4sIAAAAAAAA/5VUXW/bNhT9KwVfFyakvqU3LfEaA3GcJTaKtAgIirxMhEmUJ1HFjCD/fZeWXcdYsbaAXqh77tc5h3wltSYF6WHTiFhyHsZRSBOTZzSKooBKHYc0iyFjUR4FSWLIGWIN9GAViF1qDqC1TjmNI5nSyMiAVlHKaAVGxYYbGXJMUuPguhb6KcefaMogDlSV0yRMIhpVFaMywUSeY7NYVTrJ9a6dGvu+ts9CKld3FtPvysfF7HaFQSPrBrRQW9XAMf6wWt6dZE5x1Y3WkYL5aXq/wdbXuvZQ2U4xzhiGByfdOGDwfvbnen4/exDl5Wq+vPV79CAd+B0CFoSUB5RFK5YUPCmi4Jyn0WcEjRv9Y9CgXkCPzZ7FHgYleMXTVIaS8tCgALECWoW5ojphCklnWZV6Ljdy24J1ogX30mmc88vTsRwpXskvV/wlSbWRppKYVY1DbWEYpqQkjnUCJk1ilYTGpHGaGsaiAIG1ddB/lQ2iFsvb1fW7XwdR+BlxncPzJJqfhRR2bBrUxqqXrhee0onRiDKO34qxYvf9xjLGdlu4fiveNbsqH//z+9AwPDbEMCmCb2aSzkG7ccJ2rja1kt5UnmR+Fjz90ADJzxjAg96Qg7YFXSNw71zhthu/4h/rmxtRLpbrncXfj4HDW1M/e42bTkmvNgF7avXDfF/Ip+ty9VDeeX/PFuX8hjy9Bw6jUqjzz0AnYr6Pwz3QhxL3lQfBNDqvrzf7y7i4/DCM1fEPCqoOlL6SsfdCvTi3GYqLi6a2f2FDquHr+T9gde3OVXexkU0tskAGkBmgMs0ljVLIaFZJTqVkMs9Bp5WpvtXGkuV657PpjuD548yTie0OLH+a/U7e/MXxPKCJ0Qdjb8XpQMNW4wTtxR60f3HGHv4fvgd5n6OXpk2tbH3bB4DHbrzq1IfFJcb3w1zNP85X5Y24u19erS/9pCg4PHfemQSrilZN0x84tuDEaGsnTl+uv0dpXe0wi/vdDi+F51UYvESnFieF60c47qQ6vb91b/8CXB0FbRgGAAA=",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-security-policy": "block-all-mixed-content;default-src 'self';base-uri 'self';font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Mon, 04 Dec 2023 06:16:43 GMT",
+        "etag": "W/\"618-pUllN3lnn6wspR6Ovvz8oQ8WQ1E\"",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2998",
+        "rate-limit-reset": "17.321",
+        "referrer-policy": "no-referrer",
+        "request-id": "4428927251623122786",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539=aHeuDNGl4SA6UJIYtAof7AAAAAAV9GPRMbnZiaZzJBl1q8Oa; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "x-iinfo": "18-6521044-6281276 pNYy RT(1701670600595 117) q(0 0 0 -1) r(19 19) U6"
+      },
+      "status_code": 202
+    }
+  }
+]

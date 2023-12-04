@@ -7,7 +7,7 @@ defmodule ExXendit.EWallet do
   @doc """
   Creates an e-wallet charge.
 
-  ## Request Parameters
+  ## Body Parameters
     * `:reference_id`* - Reference ID provided by merchant (255 characters)  
 
     * `:currency`* - Currency used for the transaction in ISO4217 format - IDR, PHP, VND, THB 

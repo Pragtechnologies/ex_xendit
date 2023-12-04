@@ -12,7 +12,7 @@ defmodule ExXendit.Payout do
 
     * `:sub_account_id` - The sub-account user-id that you want to make this transaction for.  
 
-  ## Request Parameters
+  ## Body Parameters
     * `:reference_id`* - A client defined payout identifier. This is the ID assigned to the payout on your system, such as a transaction or order ID. Does not need to be unique.  
 
     * `:channel_code`* - Channel code of destination bank, e-wallet or OTC channel. 
