@@ -103,4 +103,36 @@ defmodule ExXendit.CustomerTest do
       end
     end
   end
+
+  describe "update/3" do
+    test "will return valid result for syd" do
+      use_cassette "valid_update_customer_for_syd" do
+        id = "cust-1eecc18d-914a-4f63-8fcf-8b9158d6f1e3"
+
+        params = %{
+          email: "b@b.com"
+        }
+
+        assert {:ok, %{body: body}} = Customer.update(id, params)
+        assert body["email"] == "b@b.com"
+      end
+    end
+
+    test "will return valid result for sub_account" do
+      use_cassette "valid_update_customer_for_sub_account" do
+        id = "cust-70e52cb9-6364-4bb0-a670-190495cbd69d"
+
+        params = %{
+          email: "b@b.com"
+        }
+
+        headers = %{
+          sub_account_id: "655d6ef765c63ff7577f0042"
+        }
+
+        assert {:ok, %{body: body}} = Customer.update(id, params, headers)
+        assert body["email"] == "b@b.com"
+      end
+    end
+  end
 end

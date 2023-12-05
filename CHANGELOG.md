@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v0.1.5 (2023-12-06)
+- Develop `ExXendit.Customer.update`
+
 ## v0.1.4 (2023-12-04)
 
 - Develop `ExXendit.Subscription.create_plan`
