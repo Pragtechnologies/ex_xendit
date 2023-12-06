@@ -123,4 +123,27 @@ defmodule ExXendit.Subscription do
       |> ExXendit.post(%{})
     end
   end
+
+  @doc """
+  Fetch plan.
+
+  ## Headers Parameters
+    * `:sub_account_id` - The sub-account user-id that you want to make this transaction for.  
+
+  ## Request Parameters
+    * `:id`* - Xendit generated recurring plan ID  
+
+  """
+  @spec fetch_plan(String.t(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def fetch_plan(id, headers \\ %{}) do
+    url = "recurring/plans/#{id}"
+
+    if headers != %{} do
+      url
+      |> ExXendit.get(%{}, headers)
+    else
+      url
+      |> ExXendit.get(%{})
+    end
+  end
 end
