@@ -146,4 +146,57 @@ defmodule ExXendit.Subscription do
       |> ExXendit.get(%{})
     end
   end
+
+  @doc """
+  List plan cycles.
+
+  ## Headers Parameters
+    * `:sub_account_id` - The sub-account user-id that you want to make this transaction for.  
+
+  ## Request Parameters
+    * `:id`* - Xendit generated recurring plan ID  
+
+  ## Body Parameters
+    * `:limit` - Indicating the maximum number of results to return at one time. This parameter MUST be optional for the client to provide and MUST have a default value of 10 (can be adjusted according to the resource that we are serving), for when the client does not provide a value  
+
+    * `:after_id` - ID of the immediately previous item  
+
+  """
+  @spec list_plan_cycles(String.t(), map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def list_plan_cycles(id, params, headers \\ %{}) do
+    url = "recurring/plans/#{id}/cycles"
+
+    if headers != %{} do
+      url
+      |> ExXendit.get(params, headers)
+    else
+      url
+      |> ExXendit.get(params)
+    end
+  end
+
+  # @doc """
+  # Cancel plan cycle.
+
+  # ## Headers Parameters
+  #   * `:sub_account_id` - The sub-account user-id that you want to make this transaction for.  
+
+  # ## Request Parameters
+  #   * `:plan_id`* - Xendit-generated recurring plan ID, with prefix repl-xxx  
+
+  #   * `:id`* - Xendit-generated recurring cycle ID, with prefix recy-xxx  
+
+  # """
+  # @spec cancel_plan_cycle(String.t(), String.t(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  # def cancel_plan_cycle(plan_id, id, headers \\ %{}) do
+  #   url = "recurring/plans/#{plan_id}/cycles/#{id}/cancel"
+
+  #   if headers != %{} do
+  #     url
+  #     |> ExXendit.post(%{}, headers)
+  #   else
+  #     url
+  #     |> ExXendit.post(%{})
+  #   end
+  # end
 end

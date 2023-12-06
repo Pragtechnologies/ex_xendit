@@ -286,4 +286,51 @@ defmodule ExXendit.SubscriptionTest do
       end
     end
   end
+
+  describe "list_plan_cycles/3" do
+    test "will return valid result for syd" do
+      use_cassette "valid_list_plan_cycles_for_syd" do
+        id = "repl_197999e5-c9c8-4594-986d-518c023fbca6"
+
+        params = %{
+          limit: 2
+        }
+
+        assert {:ok, %{body: body}} = Subscription.list_plan_cycles(id, params)
+
+        assert %{
+                 "data" => [
+                   %{
+                     "status" => "SCHEDULED"
+                   },
+                   %{
+                     "status" => "SUCCEEDED"
+                   }
+                 ],
+                 "has_more" => false
+               } = body
+      end
+    end
+
+    test "will return valid result for sub account" do
+      use_cassette "valid_list_plan_cycles_for_sub_account" do
+        id = "repl_5a113543-6f98-4442-ad53-85e80494266f"
+
+        params = %{
+          limit: 2
+        }
+
+        headers = %{
+          sub_account_id: "655d6ef765c63ff7577f0042"
+        }
+
+        assert {:ok, %{body: body}} = Subscription.list_plan_cycles(id, params, headers)
+
+        assert %{
+                 "data" => [],
+                 "has_more" => false
+               } = body
+      end
+    end
+  end
 end

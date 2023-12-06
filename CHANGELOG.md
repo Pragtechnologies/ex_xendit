@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.6 (2023-12-06)
+- Develop `ExXendit.Subscription.fetch_plan`
+- Develop `ExXendit.Subscription.list_plan_cycles`
+
 ## v0.1.5 (2023-12-06)
 - Develop `ExXendit.Customer.update`
 

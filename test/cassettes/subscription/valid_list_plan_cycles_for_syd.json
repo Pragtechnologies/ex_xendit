@@ -1,0 +1,50 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "",
+      "url": "https://api.xendit.co/recurring/plans/repl_197999e5-c9c8-4594-986d-518c023fbca6/cycles?limit=2",
+      "headers": {
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAIoH4sIAAAAAAAA/92TzWrcMBRG38XrUdCvbXkXZgwZyIRAJ4umBHMtXTVDbY+RZdoh5N0rjwMxaUK66KqgjeUr6dxPR0+JhQBJ8e0pOdikSDyaU8VZ5lLlGMlFCkQ6lhIwtCZOpmB5nWY5pckqMR4h4LSKUy4I44Sme8oKKQuhL7TM72PR2NvPi8Kpx1jxZX1Vbu6uy02c8ujQY2ewOnM5ClQY5giKzBKpa0dq6VKiauM4gs5ZNiH1DXTVSyN9UzGdaa1REaNNTqTSkug8tUSx3EQaVxtIp0bGIRxb9PPK6YtoplGKvCa5w5RIVluipUHiBFMZZMaBoGdKM3p/6L5XYMLh2MXlt5dfd+XNPv6EELDtQ2WOYxeSgsaDTqbBqhvbGn1S8NcSiwEOzRDv4WGVDAHCOLzJYzCPaMcGbRUOLcaStp8zlYSyOPZMFUrHcRE7vj835af8ThPS1e2E084citKI4o7exM3+ZGwjyuxENzbN82ophq1pJoAbYqSbxAAggApiNFIIUM6IDD4RI79gTPyFGJwvxNjuduVme7kv/0sx2Fsx2HtiPH0Wq6RTYvNxMzD+NJUWzLmcx1rMYz65rom2KSUKMwbMKcMUT5bO3a3XZbk5O+fi0aPHyGlx1uH1Rm62++3l9aKZJfzMsJjp8FeoPAZ/Wuo779jDqcUuVM2h+/Ei3cMHQB8+gnck4//wEUSeRxiq9uhj7w6aAZ9/A4niPFE5BQAA",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-security-policy": "block-all-mixed-content;default-src 'self';base-uri 'self';font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 06 Dec 2023 06:42:10 GMT",
+        "etag": "W/\"539-8uPmwIKFZf9GsurKXe6PE0lPLnI\"",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2999",
+        "rate-limit-reset": "60",
+        "referrer-policy": "no-referrer",
+        "request-id": "4080854447594003411",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539=EuP3I/ORnHl5cM5BtAof7AAAAAB869+diyFdXjfxYpMsyX3+; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "x-iinfo": "18-35820930-35636404 pNYy RT(1701844928533 111) q(0 0 0 -1) r(6 6) U16"
+      },
+      "status_code": 200
+    }
+  }
+]

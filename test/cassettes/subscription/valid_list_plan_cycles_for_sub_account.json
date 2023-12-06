@@ -1,0 +1,51 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "",
+      "url": "https://api.xendit.co/recurring/plans/repl_5a113543-6f98-4442-ad53-85e80494266f/cycles?limit=2",
+      "headers": {
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "for-user-id": "655d6ef765c63ff7577f0042",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "get",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAAwH4sIAAAAAAAA/6tWSkksSVSyio7VUcpILI7PzS9KVbJKS8wpTq0FALZEo/kcAAAA",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "content-security-policy": "block-all-mixed-content;default-src 'self';base-uri 'self';font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 06 Dec 2023 07:00:09 GMT",
+        "etag": "W/\"1c-WnWXJ8SIxHzSWHToV0VPwScIgiY\"",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2999",
+        "rate-limit-reset": "60",
+        "referrer-policy": "no-referrer",
+        "request-id": "3524684942053239799",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "connection": "keep-alive",
+        "set-cookie": "nlbi_2182539=zSasDcFzjU/iVy6GtAof7AAAAADsdZJ+z9kBIJMdE9GmdM/H; path=/; Domain=.xendit.co",
+        "x-cdn": "Imperva",
+        "content-encoding": "gzip",
+        "transfer-encoding": "chunked",
+        "x-iinfo": "18-36012859-36002529 pNYy RT(1701846007961 88) q(0 0 0 0) r(5 5) U16"
+      },
+      "status_code": 200
+    }
+  }
+]
