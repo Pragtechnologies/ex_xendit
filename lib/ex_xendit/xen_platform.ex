@@ -88,4 +88,41 @@ defmodule ExXendit.XenPlatform do
     "/transfers"
     |> ExXendit.post(params)
   end
+
+  @doc """
+  Update webhook
+
+  ## Request Parameters
+    * `:type`* - The type of Webhook URL you want to set  
+
+      Available values: invoice, fva_status, fva_paid, ro_fpc_paid, regional_ro_paid, ewallet, payment_method, payment_method_v2, direct_debit, qr_code, recurring, disbursement, ph_disbursement, batch_disbursement, report, payment_suceeded, payment_awaiting_capture, payment_pending, payment_failed, capture_suceeded, capture_failed, payment_request_completed
+
+  ## Body Parameters
+    * `:url`* - URL of your server that you want to receive our Webhooks at  
+
+
+  ## Response Parameters
+    * `:status` - The status of setting the Webhook URL 
+
+      Available values: SUCCESSFUL
+
+    * `:user_id` - The user_id on which the Webhook URL has been set 
+
+    * `:url` - The Webhook URL that has been set 
+
+    * `:environment` - The environment on which the Webhook URL has been set
+
+    * `:callback_token` - The unique Webhook token that is attached to each sub-account. Use this to validate that a Webhook is sent from Xendit's servers.
+
+  """
+  @spec update_webhook(String.t(), map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def update_webhook(type, params, headers \\ %{}) do
+    if headers != %{} do
+      "/callback_urls/#{type}"
+      |> ExXendit.post(params, headers)
+    else
+      "/callback_urls/#{type}"
+      |> ExXendit.post(params)
+    end
+  end
 end

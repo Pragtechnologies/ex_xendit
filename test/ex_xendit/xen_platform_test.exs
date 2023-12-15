@@ -43,4 +43,36 @@ defmodule ExXendit.XenPlatformTest do
       end
     end
   end
+
+  describe "update_webhook/1" do
+    test "will return result for main" do
+      use_cassette "valid_update_webhook_main" do
+        type = "ewallet"
+
+        params = %{
+          url: "https://staging.seeyoudoc.com/api/callback/xen"
+        }
+
+        assert {:ok, %{body: body}} = XenPlatform.update_webhook(type, params)
+        assert %{"status" => "SUCCESSFUL"} = body
+      end
+    end
+
+    test "will return result for sub account" do
+      use_cassette "valid_update_webhook_sub_account" do
+        type = "ewallet"
+
+        params = %{
+          url: "https://staging.seeyoudoc.com/api/callback/xen"
+        }
+
+        headers = %{
+          sub_account_id: "656168ec65c63ff757988893"
+        }
+
+        assert {:ok, %{body: body}} = XenPlatform.update_webhook(type, params, headers)
+        assert %{"status" => "SUCCESSFUL"} = body
+      end
+    end
+  end
 end
