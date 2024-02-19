@@ -37,4 +37,32 @@ defmodule ExXendit.EWallet do
       |> ExXendit.post(params)
     end
   end
+
+  @doc """
+  Creates an e-wallet refund.
+
+  ## Path Parameters
+    * `:id`* - Unique identifier for charge request transaction (returned as id in the eWallet Charge request)  
+
+  ## Body Parameters
+    * `:amount` - Amount to be refunded to your customer. Cumulative amount refunded must not exceed the original transacted amount. If the amount field is not present in the request body, the remaining unrefunded amount of the charge would be processed.
+
+    * `:reason` - Reason for refund, one of the following values can be used.
+    
+      Available values: `DUPLICATE`, `FRAUDULENT`, `REQUESTED_BY_CUSTOMER`, `CANCELLATION`, `OTHERS`
+
+  """
+  @spec create_refund(String.t(), map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def create_refund(id, params, headers \\ %{}) do
+    if headers != %{} do
+      "ewallets/charges/#{id}/refunds"
+      |> ExXendit.post(params, headers)
+    else
+      # coveralls-ignore-start
+      "ewallets/charges/#{id}/refunds"
+      |> ExXendit.post(params)
+
+      # coveralls-ignore-stop
+    end
+  end
 end

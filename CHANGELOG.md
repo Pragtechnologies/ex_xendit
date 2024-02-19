@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v0.1.8 (2024-02-19)
+- Develop `ExXendit.EWallet.create_refund`
+
 ## v0.1.7 (2023-12-15)
 - Develop `ExXendit.XenPlatform.set_webhook`
 

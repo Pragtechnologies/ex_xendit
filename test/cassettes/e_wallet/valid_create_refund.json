@@ -1,0 +1,51 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"reason\":\"CANCELLATION\",\"amount\":763.58}",
+      "url": "https://api.xendit.co/ewallets/charges/ewc_90dfa524-1cc7-413f-838e-b778f1cf5b4c/refunds",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "for-user-id": "656f138e277d4ff66454ecab",
+        "user-agent": "req/0.4.5"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": false,
+      "type": "ok",
+      "body": "{\"id\":\"ewr_6af2be28-8f40-4378-ace9-96eb86599e5d\",\"charge_id\":\"ewc_90dfa524-1cc7-413f-838e-b778f1cf5b4c\",\"status\":\"PENDING\",\"currency\":\"PHP\",\"channel_code\":\"PH_GCASH\",\"capture_amount\":763.58,\"refund_amount\":763.58,\"failure_code\":null,\"reason\":\"CANCELLATION\",\"refund_amount_to_payer\":null,\"payer_captured_amount\":null,\"payer_captured_currency\":null,\"created\":\"2024-02-19T13:06:04.634183Z\",\"updated\":\"2024-02-19T13:06:04.634183Z\"}\n",
+      "headers": {
+        "date": "Mon, 19 Feb 2024 13:06:04 GMT",
+        "content-type": "application/json; charset=UTF-8",
+        "content-length": "428",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "content-security-policy": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "expect-ct": "max-age=0",
+        "rate-limit-limit": "3000",
+        "rate-limit-remaining": "2999",
+        "rate-limit-reset": "60",
+        "referrer-policy": "no-referrer",
+        "request-id": "8706600646042004090",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-dns-prefetch-control": "off",
+        "x-download-options": "noopen",
+        "x-frame-options": "SAMEORIGIN",
+        "x-permitted-cross-domain-policies": "none",
+        "x-xss-protection": "0",
+        "cf-cache-status": "DYNAMIC",
+        "set-cookie": "__cf_bm=Qoe6tHA4oa3G2QxHT8uvjlItnc.lxf.ajmhneIVOWjM-1708347964-1.0-AS4xsTbfqTaMZbbDZZYX4kD36wiU/vHuFEGbVS2BG9wa6uhkgz4+uDRUX66nUkXkHObW7O5/7oF3T46Z+r1pdLw=; path=/; expires=Mon, 19-Feb-24 13:36:04 GMT; domain=.xendit.co; HttpOnly; Secure; SameSite=None",
+        "server": "cloudflare",
+        "cf-ray": "857eb998da3b0ec8-HKG"
+      },
+      "status_code": 202
+    }
+  }
+]

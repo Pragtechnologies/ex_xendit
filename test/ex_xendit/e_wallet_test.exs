@@ -105,4 +105,24 @@ defmodule ExXendit.EWalletTest do
       end
     end
   end
+
+  describe "create_refund/2 for sub account" do
+    test "will return valid result" do
+      use_cassette "valid_create_refund" do
+        id = "ewc_90dfa524-1cc7-413f-838e-b778f1cf5b4c"
+
+        params = %{
+          amount: 763.58,
+          reason: "CANCELLATION"
+        }
+
+        headers = %{
+          sub_account_id: "656f138e277d4ff66454ecab"
+        }
+
+        assert {:ok, %{body: body}} = EWallet.create_refund(id, params, headers)
+        assert %{"capture_amount" => 763.58} = body
+      end
+    end
+  end
 end
