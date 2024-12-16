@@ -50,8 +50,8 @@ defmodule ExXendit.CreditCardTest do
       use_cassette "valid_create_charge_capture_false_sa" do
         params = %{
           token_id: "675bac81da69a10016a9698f",
-          authentication_id: "675bac8fda69a10016a96991",
-          external_id: "8640be02-dec2-495c-a5b0-b64f736039e7",
+          authentication_id: "675fc3ee813c3500169b2db3",
+          external_id: "956b4efd-a02c-4b26-8997-4dbe067974c9",
           amount: 788.60,
           currency: "PHP",
           capture: false
@@ -76,8 +76,75 @@ defmodule ExXendit.CreditCardTest do
           id_type: "charge"
         }
 
-        assert {:ok, %{body: body}} = CreditCard.get_charge(charge_id, params)
+        headers = %{
+          sub_account_id: "656f138e277d4ff66454ecab"
+        }
+
+        assert {:ok, %{body: body}} = CreditCard.get_charge(charge_id, params, headers)
         assert body["approval_code"] == "831000"
+      end
+    end
+  end
+
+  describe "capture_charge/2 for main account for multi use" do
+    test "will return valid result" do
+      use_cassette "valid_capture_charge" do
+        charge_id = "675bada1813c3500169ae207"
+
+        params = %{
+          amount: "788.6"
+        }
+
+        headers = %{
+          sub_account_id: "656f138e277d4ff66454ecab"
+        }
+
+        assert {:ok, %{body: body}} = CreditCard.capture_charge(charge_id, params, headers)
+        assert body["approval_code"] == "831000"
+      end
+    end
+  end
+
+  describe "reverse_charge/2 for sub account" do
+    test "will return valid result" do
+      use_cassette "valid_reverse_charge" do
+        charge_id = "675fc450813c3500169b2dc0"
+
+        params = %{
+          external_id: "956b4efd-a02c-4b26-8997-4dbe067974c9"
+        }
+
+        headers = %{
+          sub_account_id: "656f138e277d4ff66454ecab"
+        }
+
+        assert {:ok, %{body: body}} =
+                 CreditCard.reverse_charge(charge_id, params, headers)
+
+        assert body["status"] == "SUCCEEDED"
+      end
+    end
+  end
+
+  describe "create_refund/2 for sub account" do
+    test "will return valid result" do
+      use_cassette "valid_create_refund" do
+        charge_id = "675bada1813c3500169ae207"
+
+        params = %{
+          amount: "788.6",
+          external_id: "8640be02-dec2-495c-a5b0-b64f736039e7"
+        }
+
+        headers = %{
+          sub_account_id: "656f138e277d4ff66454ecab",
+          x_api_version: "2019-05-01"
+        }
+
+        assert {:ok, %{body: body}} =
+                 CreditCard.create_refund(charge_id, params, headers)
+
+        assert body["status"] == "REQUESTED"
       end
     end
   end

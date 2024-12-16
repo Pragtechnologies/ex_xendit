@@ -66,8 +66,37 @@ defmodule ExXendit.CreditCard do
       "credit_card_charges/#{charge_id}/capture"
       |> ExXendit.post(params, headers)
     else
+      # coveralls-ignore-start
       "credit_card_charges/#{charge_id}/capture"
       |> ExXendit.post(params)
+
+      # coveralls-ignore-stop
+    end
+  end
+
+  @doc """
+  Reverse Charge
+
+  This API provides reversing charge when the charge has AUTHORIZED status and hasn't yet captured.
+
+  ## Path Parameters
+    * `:create_charge_id`* - Charge ID of authorization  
+
+  ## Body Parameters
+    * `:external_id` - A unique identifier of your choice. Max 64 characters.
+
+  """
+  @spec reverse_charge(String.t(), map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
+  def reverse_charge(charge_id, params, headers \\ %{}) do
+    if headers != %{} do
+      "credit_card_charges/#{charge_id}/auth_reversal"
+      |> ExXendit.post(params, headers)
+    else
+      # coveralls-ignore-start
+      "credit_card_charges/#{charge_id}/auth_reversal"
+      |> ExXendit.post(params)
+
+      # coveralls-ignore-stop
     end
   end
 
@@ -88,11 +117,11 @@ defmodule ExXendit.CreditCard do
   @spec create_refund(String.t(), map(), ExXendit.headers()) :: {:ok, Req.Response.t()}
   def create_refund(charge_id, params, headers \\ %{}) do
     if headers != %{} do
-      "credit_card_charges/#{charge_id}/refund"
+      "credit_card_charges/#{charge_id}/refunds"
       |> ExXendit.post(params, headers)
     else
       # coveralls-ignore-start
-      "credit_card_charges/#{charge_id}/refund"
+      "credit_card_charges/#{charge_id}/refunds"
       |> ExXendit.post(params)
 
       # coveralls-ignore-stop

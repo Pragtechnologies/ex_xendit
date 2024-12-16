@@ -1,0 +1,44 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"amount\":\"788.6\"}",
+      "url": "https://api.xendit.co/credit_card_charges/675bada1813c3500169ae207/capture",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "for-user-id": "656f138e277d4ff66454ecab",
+        "user-agent": "req/0.4.14"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAJ5H4sIAAAAAAAAA4RSXW/bMAz8K4Yeh6SQ/G0De1ASY/XSJlnjDM1eDFmiG6OObMhy2q7ofx/kNGjSDRgfySPveOQr6jTTfYdiNKWrbHOXzNAIsV7vGlX9BpGzfdNLjeIgDK/8EeKs1b2Cv9K9UiD5C4rR6nqFRmgPmgmmGYpf30aIK2AaBIqRjW13TOwxcTLsxK4bO85V5Lm/0AASlc45UyLXzSPIvDIdfuAVjIdEMD9iBGPis8iPwhKNUNF3lYSuewd6fkmcEOwgEG5Z+r7rucBZMahRfMekPgIJdjGJIuydVxSUYFaAnDcCPnjLS94IoxGCZw1Ksvo4LvRdXAC2xwK4PXYjj4+ZV+Bx4btl4PjYiSAwTbxCMRpI+Y6pB8j1S2uIbjc3Wbq6SfLNOsmz5TxZGF2sewRxNEP2+wIUipGLTdwPQXBEzCgDKBSTRsnPdE1Puffh07tklmYmeZCnzW7RCD0P0ilNJ5PtokmeKKVTPt/R74/iBzXxdRh0OPwfJaDjqmp1YyTez7Iv6yTZLjez5dS6Xt7M0sW3s49iumrODysYDonDHc8YHDGwsW8Oy+RjroA3kld1ddYTOC72iRs4DnZ8YtsediLPWMraVjUHVp92DB2CsbnVvhJ5zQqojbhkMUuzfEW3t3RL8yxZG2eqrusr+ZAPpJLtTfsqsyZ0Mbfu6HxLMytdzJaLZJ1SK5vMTcuZfvJJv7m1BP3UKLNC1zayAxS/Hq/yuXCSO0i9QFy4SoftQFhMCos3+7YGDcLqeg5dV/Z1/XL+ykwcqo8/xuQftYvpm1YwDZahtypZNmo/OH6F3t7+AAAA//8DAJqucEsfBAAA",
+      "headers": {
+        "date": "Mon, 16 Dec 2024 05:45:34 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"41f-HgvZWa4XSzT/rFQd0XN9uwODyUk\"",
+        "rate-limit-limit": "600",
+        "rate-limit-remaining": "599",
+        "rate-limit-reset": "60",
+        "request-id": "8443669450919804703",
+        "vary": "Origin, Accept-Encoding",
+        "x-powered-by": "Express",
+        "cf-cache-status": "DYNAMIC",
+        "set-cookie": "__cf_bm=wI2tbJV42nht6Pq.Hhv_hbKcKx2vinft.sQ4FO5guiw-1734327934-1.0.1.1-l3AAHOkX3S_SCqYMV0MPemXraG2LBwPANahro5ANLL4COdstYuwSLczIbmlwaVUenQlrKy1dvi3.TJ53F4Afcg; path=/; expires=Mon, 16-Dec-24 06:15:34 GMT; domain=.xendit.co; HttpOnly; Secure; SameSite=None",
+        "server": "cloudflare",
+        "cf-ray": "8f2c5e29af535dda-HKG",
+        "content-encoding": "gzip"
+      },
+      "status_code": 200
+    }
+  }
+]

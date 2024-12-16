@@ -1,0 +1,44 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"external_id\":\"956b4efd-a02c-4b26-8997-4dbe067974c9\"}",
+      "url": "https://api.xendit.co/credit_card_charges/675fc450813c3500169b2dc0/auth_reversal",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "for-user-id": "656f138e277d4ff66454ecab",
+        "user-agent": "req/0.4.14"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAADXH4sIAAAAAAAAA0TOzUrFMBBA4XeZdXOZTJNJ0u29fQJ146Ykk4kWtEKbgiC+u/gD7r8D5wOOnvt5wAR3D9frPN/mGwwgu9a1L5L3ushz3p90WStMwME3cR6jHWX0iJZToSoIA5TzWDc9jj/oudkxKoVQXWvMzjuVXGAAfe+6b/nlFybPxWmrJiOJcYXYxJSCcbUockjBSYIB8uvbuXWYQowX/vnLXb97QnLGkrF8jzxRmCxdEtpHGOD/ODpsVrKOiDYwJZIAn18AAAD//wMAUAVPCvsAAAA=",
+      "headers": {
+        "date": "Mon, 16 Dec 2024 06:27:14 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"fb-Wak8pKbrvOX8P6PdNd880ELYcFU\"",
+        "rate-limit-limit": "600",
+        "rate-limit-remaining": "599",
+        "rate-limit-reset": "60",
+        "request-id": "3448696506970484939",
+        "vary": "Origin, Accept-Encoding",
+        "x-powered-by": "Express",
+        "cf-cache-status": "DYNAMIC",
+        "set-cookie": "__cf_bm=icTkhlt_m08cNLKZW7iffaZDiNwQNECUg.3OOxVO2Qo-1734330434-1.0.1.1-04CvXTkMy7iDyECpijYzCkWJgmc8mTfis9SBJ5lnbUBoGGMuH.SkVehqI6JmpZ8cXx8Mi0WRw1QTf_a7km7J2Q; path=/; expires=Mon, 16-Dec-24 06:57:14 GMT; domain=.xendit.co; HttpOnly; Secure; SameSite=None",
+        "server": "cloudflare",
+        "cf-ray": "8f2c9b33babd8533-HKG",
+        "content-encoding": "gzip"
+      },
+      "status_code": 200
+    }
+  }
+]
