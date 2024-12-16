@@ -1,0 +1,45 @@
+[
+  {
+    "request": {
+      "options": [],
+      "body": "{\"external_id\":\"8640be02-dec2-495c-a5b0-b64f736039e7\",\"amount\":\"788.6\"}",
+      "url": "https://api.xendit.co/credit_card_charges/675bada1813c3500169ae207/refunds",
+      "headers": {
+        "accept": "application/json",
+        "accept-encoding": "gzip",
+        "authorization": "Basic eG5kX2RldmVsb3BtZW50X3JpdkNCemY5SFl4OFU5ZzM2NEh2cVR0OHFLQVBERFI3UVlGZTdwQlBsOGxlZjhoQ0t0QlBYbng3QzFLVTQzOg==",
+        "content-type": "application/json",
+        "for-user-id": "656f138e277d4ff66454ecab",
+        "user-agent": "req/0.4.14",
+        "x-api-version": "2019-05-01"
+      },
+      "method": "post",
+      "request_body": ""
+    },
+    "response": {
+      "binary": true,
+      "type": "ok",
+      "body": "g20AAAFAH4sIAAAAAAAAA4SRTUsDMRCG/8ucNyWbj9nN3goW9Va1InpZJsnEFtptSbOgiP9doha8eZ2P93nnnQ8ImeOujIFyHMOW8iuPuwgDYGc9RWr7VgdtpWzRESvZQQN0OM5TgaHr+wU2wG+F80T7n70ejfQslYgclDDOBkHWS+HRpE6j1I6rxrlQmc8wwP3q7nH1sFldQQMHzmFLUxkzJ848BR7DMfLFTehTJHTUVjfk0DkJDczzN9cG2eroO4GJkzBkrXBJKeEJldYdRkaEBsKcq/A7DLC+WdfCfsdTGcv7qXKW69vxerlZPS2fay8zFa7qSiojWiVa3EgcjBqkWaDDl8o/xf+HLpGm4H34E6lXrAM0kJjr0fMUx0u6soH5zPn3GxZTq3tWXRdNSojGGg7k4fMLAAD//wMA1Cx8bsIBAAA=",
+      "headers": {
+        "date": "Mon, 16 Dec 2024 06:42:06 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "transfer-encoding": "chunked",
+        "connection": "keep-alive",
+        "access-control-allow-origin": "*",
+        "etag": "W/\"1c2-j2/9wkJNwM2yH19izkopIM80PuM\"",
+        "rate-limit-limit": "600",
+        "rate-limit-remaining": "599",
+        "rate-limit-reset": "60",
+        "request-id": "3976682546069531499",
+        "vary": "Origin, Accept-Encoding",
+        "x-powered-by": "Express",
+        "cf-cache-status": "DYNAMIC",
+        "set-cookie": "__cf_bm=Vw_M1h.JJ1BNO8U6JgFIHqeEB70caVr2Kf7WNqB2rbM-1734331326-1.0.1.1-paJ8OEoS1nC9Spr_eMz7eN75X45ZdrG0FHMj9Sslh9WKPSvz_eUstYG5I0Nxfbkvd85vdE1hboyxb1QVuJQytw; path=/; expires=Mon, 16-Dec-24 07:12:06 GMT; domain=.xendit.co; HttpOnly; Secure; SameSite=None",
+        "server": "cloudflare",
+        "cf-ray": "8f2cb0f99aae848a-HKG",
+        "content-encoding": "gzip"
+      },
+      "status_code": 200
+    }
+  }
+]

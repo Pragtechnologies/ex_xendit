@@ -56,6 +56,7 @@ defmodule ExXendit do
     |> sub_account(headers)
     |> fee_rule(headers)
     |> idempotency_key(headers)
+    |> x_api_version(headers)
   end
 
   defp parse_url(url, nil), do: url
@@ -104,6 +105,15 @@ defmodule ExXendit do
 
   defp idempotency_key(req, _), do: req
 
+  defp x_api_version(req, %{x_api_version: value}) do
+    req
+    |> Req.Request.put_headers([
+      {"x-api-version", value}
+    ])
+  end
+
+  defp x_api_version(req, _), do: req
+
   @typedoc """
   Headers used in Xendit
 
@@ -113,10 +123,13 @@ defmodule ExXendit do
     * `:with_split_rule` - Split Rule ID that you would like to apply to this eWallet charge  
 
     * `:idempotency_key` - 	A unique key to prevent processing duplicate requests. Can be your reference_id or any GUID. Must be unique across development & production environments.  
+
+    * `:x_api_version` - 	Value of this must be "2019-05-01". Used in credit card refunds. 
   """
   @type headers() :: %{
           optional(:sub_account_id) => String.t(),
           optional(:with_split_rule) => String.t(),
-          optional(:idempotency_key) => String.t()
+          optional(:idempotency_key) => String.t(),
+          optional(:x_api_version) => String.t()
         }
 end
